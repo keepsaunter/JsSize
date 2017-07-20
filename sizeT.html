@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function calc(sizeInBytes) {
+            var types = ['bytes', 'KB', 'MB', 'GB'];
+            var type = 0;
+            while (sizeInBytes >= 1024){
+                sizeInBytes = sizeInBytes / 1024;
+                type++;
+            }
+            return sizeInBytes + types[type];
+        }
+        console.log(calc(2048))  // 2 KB
+        console.log(calc(3))  // 3 bytes
+    </script>
+</head>
+<body>
+
+</body>
+</html>
